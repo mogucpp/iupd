@@ -1,10 +1,10 @@
 {
-	"name": "iupd",
-	"authors": [
-		"mogu"
-	],
-	"description": "D interface of IUP",
-	"copyright": "Copyright © 2016, mogu",
-	"license": "MIT",
+    "name": "iupd",
+    "authors": [
+        "mogu"
+    ],
+    "description": "D interface of IUP",
+    "copyright": "Copyright © 2016, mogu",
+    "license": "MIT",
     "targetType": "staticLibrary"
 }
