@@ -14,8 +14,8 @@ extern(C) {
     Ihandle* IupMatrixList();
 
     /* Used by IupColorbar */
-    static immutable IUP_PRIMARY = -1;
-    static immutable IUP_SECONDARY = -2;
+    enum IUP_PRIMARY = -1;
+    enum IUP_SECONDARY = -2;
 
     /* available only when linking with "iupluamatrix" */
     void IupMatrixSetFormula(Ihandle* ih, int col, const(char) * formula, const(char) * init);

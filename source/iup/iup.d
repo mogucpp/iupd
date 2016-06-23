@@ -1,11 +1,11 @@
 module iup.iup;
 
-static immutable IUP_NAME = "IUP - Portable User Interface";
-static immutable IUP_DESCRIPTION = "Multi-platform Toolkit for Building Graphical User Interfaces";
-static immutable IUP_COPYRIGHT = "Copyright (C) 1994-2016 Tecgraf/PUC-Rio";
-static immutable IUP_VERSION = "3.18"         /* bug fixes are reported only by IupVersion functions */;
-static immutable IUP_VERSION_NUMBER = 318000;
-static immutable IUP_VERSION_DATE = "2016/03/21"  /* does not include bug fix releases */;
+enum const(char) * IUP_NAME = "IUP - Portable User Interface";
+enum const(char) * IUP_DESCRIPTION = "Multi-platform Toolkit for Building Graphical User Interfaces";
+enum const(char) * IUP_COPYRIGHT = "Copyright (C) 1994-2016 Tecgraf/PUC-Rio";
+enum const(char) * IUP_VERSION = "3.18"         /* bug fixes are reported only by IupVersion functions */;
+enum const(char) * IUP_VERSION_NUMBER = 318000;
+enum const(char) * IUP_VERSION_DATE = "2016/03/21"  /* does not include bug fix releases */;
 
 extern(C) {
     struct Ihandle_;
@@ -287,32 +287,32 @@ extern(C) {
 /************************************************************************/
 /*                   Common Flags and Return Values                     */
 /************************************************************************/
-static immutable IUP_ERROR      = 1;
-static immutable IUP_NOERROR    = 0;
-static immutable IUP_OPENED     = -1;
-static immutable IUP_INVALID    = -1;
-static immutable IUP_INVALID_ID = -10;
+enum IUP_ERROR      = 1;
+enum IUP_NOERROR    = 0;
+enum IUP_OPENED     = -1;
+enum IUP_INVALID    = -1;
+enum IUP_INVALID_ID = -10;
 
 
 /************************************************************************/
 /*                   Callback Return Values                             */
 /************************************************************************/
-static immutable IUP_IGNORE   = -1;
-static immutable IUP_DEFAULT  = -2;
-static immutable IUP_CLOSE    = -3;
-static immutable IUP_CONTINUE = -4;
+enum IUP_IGNORE   = -1;
+enum IUP_DEFAULT  = -2;
+enum IUP_CLOSE    = -3;
+enum IUP_CONTINUE = -4;
 
 /************************************************************************/
 /*           IupPopup and IupShowXY Parameter Values                    */
 /************************************************************************/
-static immutable IUP_CENTER       = 0xFFFF  /* 65535 */;
-static immutable IUP_LEFT         = 0xFFFE  /* 65534 */;
-static immutable IUP_RIGHT        = 0xFFFD  /* 65533 */;
-static immutable IUP_MOUSEPOS     = 0xFFFC  /* 65532 */;
-static immutable IUP_CURRENT      = 0xFFFB  /* 65531 */;
-static immutable IUP_CENTERPARENT = 0xFFFA  /* 65530 */;
-static immutable IUP_TOP          = IUP_LEFT;
-static immutable IUP_BOTTOM       = IUP_RIGHT;
+enum IUP_CENTER       = 0xFFFF  /* 65535 */;
+enum IUP_LEFT         = 0xFFFE  /* 65534 */;
+enum IUP_RIGHT        = 0xFFFD  /* 65533 */;
+enum IUP_MOUSEPOS     = 0xFFFC  /* 65532 */;
+enum IUP_CURRENT      = 0xFFFB  /* 65531 */;
+enum IUP_CENTERPARENT = 0xFFFA  /* 65530 */;
+enum IUP_TOP          = IUP_LEFT;
+enum IUP_BOTTOM       = IUP_RIGHT;
 
 /************************************************************************/
 /*               SHOW_CB Callback Values                                */
@@ -328,11 +328,11 @@ enum{IUP_SBUP,   IUP_SBDN,    IUP_SBPGUP,   IUP_SBPGDN,    IUP_SBPOSV, IUP_SBDRA
 /************************************************************************/
 /*               Mouse Button Values and Macros                         */
 /************************************************************************/
-static immutable IUP_BUTTON1 = '1';
-static immutable IUP_BUTTON2 = '2';
-static immutable IUP_BUTTON3 = '3';
-static immutable IUP_BUTTON4 = '4';
-static immutable IUP_BUTTON5 = '5';
+enum IUP_BUTTON1 = '1';
+enum IUP_BUTTON2 = '2';
+enum IUP_BUTTON3 = '3';
+enum IUP_BUTTON4 = '4';
+enum IUP_BUTTON5 = '5';
 
 pragma(inline, true) {
     auto iup_isshift(T)(T s)    { return s[0] == 'S'; }
@@ -350,26 +350,26 @@ pragma(inline, true) {
 /************************************************************************/
 /*                      Pre-Defined Masks                               */
 /************************************************************************/
-static immutable const(char) * IUP_MASK_FLOAT       = "[+/-]?(/d+/.?/d*|/./d+)";
-static immutable const(char) * IUP_MASK_UFLOAT      = "(/d+/.?/d*|/./d+)";
-static immutable const(char) * IUP_MASK_EFLOAT      = "[+/-]?(/d+/.?/d*|/./d+)([eE][+/-]?/d+)?";
-static immutable const(char) * IUP_MASK_FLOATCOMMA  = "[+/-]?(/d+/,?/d*|/,/d+)";
-static immutable const(char) * IUP_MASK_UFLOATCOMMA = "(/d+/,?/d*|/,/d+)";
-static immutable const(char) * IUP_MASK_INT         = "[+/-]?/d+";
-static immutable const(char) * IUP_MASK_UINT        = "/d+";
+enum const(char) * IUP_MASK_FLOAT       = "[+/-]?(/d+/.?/d*|/./d+)";
+enum const(char) * IUP_MASK_UFLOAT      = "(/d+/.?/d*|/./d+)";
+enum const(char) * IUP_MASK_EFLOAT      = "[+/-]?(/d+/.?/d*|/./d+)([eE][+/-]?/d+)?";
+enum const(char) * IUP_MASK_FLOATCOMMA  = "[+/-]?(/d+/,?/d*|/,/d+)";
+enum const(char) * IUP_MASK_UFLOATCOMMA = "(/d+/,?/d*|/,/d+)";
+enum const(char) * IUP_MASK_INT         = "[+/-]?/d+";
+enum const(char) * IUP_MASK_UINT        = "/d+";
 
 
 /************************************************************************/
 /*                   IupGetParam Callback situations                    */
 /************************************************************************/
-static immutable IUP_GETPARAM_BUTTON1 = -1;
-static immutable IUP_GETPARAM_INIT    = -2;
-static immutable IUP_GETPARAM_BUTTON2 = -3;
-static immutable IUP_GETPARAM_BUTTON3 = -4;
-static immutable IUP_GETPARAM_CLOSE   = -5;
-static immutable IUP_GETPARAM_OK      = IUP_GETPARAM_BUTTON1;
-static immutable IUP_GETPARAM_CANCEL  = IUP_GETPARAM_BUTTON2;
-static immutable IUP_GETPARAM_HELP    = IUP_GETPARAM_BUTTON3;
+enum IUP_GETPARAM_BUTTON1 = -1;
+enum IUP_GETPARAM_INIT    = -2;
+enum IUP_GETPARAM_BUTTON2 = -3;
+enum IUP_GETPARAM_BUTTON3 = -4;
+enum IUP_GETPARAM_CLOSE   = -5;
+enum IUP_GETPARAM_OK      = IUP_GETPARAM_BUTTON1;
+enum IUP_GETPARAM_CANCEL  = IUP_GETPARAM_BUTTON2;
+enum IUP_GETPARAM_HELP    = IUP_GETPARAM_BUTTON3;
 
 
 /************************************************************************/
