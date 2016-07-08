@@ -4,7 +4,7 @@ enum const(char) * IUP_NAME = "IUP - Portable User Interface";
 enum const(char) * IUP_DESCRIPTION = "Multi-platform Toolkit for Building Graphical User Interfaces";
 enum const(char) * IUP_COPYRIGHT = "Copyright (C) 1994-2016 Tecgraf/PUC-Rio";
 enum const(char) * IUP_VERSION = "3.18"         /* bug fixes are reported only by IupVersion functions */;
-enum const(char) * IUP_VERSION_NUMBER = 318000;
+enum IUP_VERSION_NUMBER = 318000;
 enum const(char) * IUP_VERSION_DATE = "2016/03/21"  /* does not include bug fix releases */;
 
 extern(C) {
